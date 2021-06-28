@@ -10,4 +10,8 @@ export class AbstartPage{
         cy.visit(this.url);
     }
 
+    getUrl(){
+        return this.url;
+    }
+
 }
