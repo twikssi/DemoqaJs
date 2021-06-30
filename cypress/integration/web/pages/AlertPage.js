@@ -35,6 +35,6 @@ export class AlertPage {
     }
 
     clickPromtButton() {
-        cy.get(this.promtResult).click();
+        cy.get(this.promtButton).click();
     }
 }
