@@ -1,13 +1,19 @@
 ///<reference types="cypress"/>
 import { UploadDownloadPage } from "../../../support/web/pages/UploadDownloadPage";
-import { unlink } from 'fs/promises';
+//import {  };
+//var fs = require('fs');
 
 const uploadDownloadPage = new UploadDownloadPage();
 
 it('Upload, download page tests', () => {
+    
+    fs.open('../../../downloads/sampleFile.jpeg');
+
     let expectedPath = 'C:\\fakepath\\jsPhoto.png';
 
-    fs.unlink('../../downloads/sampleFile.jpeg');
+    //const fs = require('fs-js');
+    
+//fs.open('')
 
     uploadDownloadPage.openPage();
     uploadDownloadPage.isPageOpened();
