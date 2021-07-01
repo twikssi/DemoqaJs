@@ -2,7 +2,7 @@
 
 import { AbstartPage } from "./AbstractPage";
 
-export class CheckBoxPage extends AbstartPage{
+export class CheckBoxPage extends AbstartPage {
 
     expandButton = '//button[@title="Expand all"]';
 
@@ -20,11 +20,11 @@ export class CheckBoxPage extends AbstartPage{
 
     checkboxDownloads = '//label[@for="tree-node-downloads"]';
 
-    constructor (){
+    constructor() {
         super('/checkbox');
     }
 
-    getCheckboxHomeHalfCheck(){
+    getCheckboxHomeHalfCheck() {
         return cy.get(this.checkboxHomeHalfCheck);
     }
 

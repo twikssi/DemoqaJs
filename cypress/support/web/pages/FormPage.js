@@ -2,7 +2,7 @@
 
 import { AbstartPage } from "./AbstractPage";
 
-export class FormPage extends AbstartPage{
+export class FormPage extends AbstartPage {
 
     firstNameField = '#firstName';
 
@@ -32,75 +32,75 @@ export class FormPage extends AbstartPage{
 
     submitingForm = '.modal-content';
 
-    constructor (){
+    constructor() {
         super('/automation-practice-form');
     }
 
-    inputFirstName (name){
+    inputFirstName(name) {
         cy.get(this.firstNameField).type(name);
     }
 
-    inputLastName (lastName){
+    inputLastName(lastName) {
         cy.get(this.lastNameField).type(lastName);
     }
 
-    inputEmail (email){
+    inputEmail(email) {
         cy.get(this.emailField).type(email);
     }
 
-    inputGenders (gender){
+    inputGenders(gender) {
         cy.xpath(this.genderLabels).contains(gender).click();
     }
 
-    inputMobileNumber (mobileNumber){
+    inputMobileNumber(mobileNumber) {
         cy.get(this.mobileNumberField).type(mobileNumber);
     }
 
-    inputDateOfBirth (date){
+    inputDateOfBirth(date) {
         cy.get(this.dateOfBirthField).type('{selectall}' + date + '{enter}');
     }
 
-    inputSubject (subject){
+    inputSubject(subject) {
         cy.get(this.subjectField).type(subject + '{enter}');
     }
 
-    inputHobbie (hobbie){
+    inputHobbie(hobbie) {
         return cy.xpath(this.hobbieCheckboxes).contains(hobbie).click();
     }
 
-    uploadFile (){
+    uploadFile() {
         cy.get(this.pictureUploading).attachFile('jsPhoto.png');
     }
 
-    inputCurrentAddress (address){
+    inputCurrentAddress(address) {
         cy.get(this.currentAddressArea).type(address);
     }
 
-    inputState (state){
+    inputState(state) {
         cy.get(this.stateInput).type(state + '{downarrow}{enter}');
     }
 
-    inputCity (city){
+    inputCity(city) {
         cy.get(this.cityInput).type(city + '{downarrow}{enter}')
     }
 
-    clickSubmit (){
+    clickSubmit() {
         cy.get(this.buttonSubmit).click();
     }
 
-    getSubmitingForm (){
+    getSubmitingForm() {
         return cy.get(this.submitingForm);
     }
 
-    getColorFieldEmail (){
+    getColorFieldEmail() {
         return cy.get(this.emailField);
     }
- 
-    getColorName (){
-         return cy.get(this.firstNameField);
+
+    getColorName() {
+        return cy.get(this.firstNameField);
     }
- 
-    getColorMobileNumberField (){
-         return cy.get(this.mobileNumberField);
+
+    getColorMobileNumberField() {
+        return cy.get(this.mobileNumberField);
     }
 }

@@ -14,6 +14,7 @@
     "cypress-xpath": "^1.6.2"
   },
   "dependencies": {
-    "cypress": "^7.6.0"
+    "cypress": "^7.6.0",
+    "cypress-downloadfile": "^1.2.1"
   }
 }

@@ -1,9 +1,9 @@
 /// <reference types="cypress-xpath" />
-import { CheckBoxPage } from "../pages/CheckBoxPage";
+import { CheckBoxPage } from "../../../support/web/pages/CheckBoxPage";
 
 const checkboxPage = new CheckBoxPage();
 
-it('Collaps, Expand checkbox test', ()=>{
+it('Collaps, Expand checkbox test', () => {
     checkboxPage.openPage();
     checkboxPage.isPageOpened();
     checkboxPage.getSizeCheckBoxList().should('have.length', 1);
@@ -15,9 +15,9 @@ it('Collaps, Expand checkbox test', ()=>{
     checkboxPage.getSizeCheckBoxList().should('not.have.length', 17);
 })
 
-it('All Selected Checkboxes test', ()=>{
-    let expectedChechboxText = 
-    'You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile';
+it('All Selected Checkboxes test', () => {
+    let expectedChechboxText =
+        'You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile';
 
 
     checkboxPage.openPage();
@@ -31,7 +31,7 @@ it('All Selected Checkboxes test', ()=>{
     checkboxPage.getResultCheckboxList().should('not.exist');
 })
 
-it('Parts of checkbox', ()=>{
+it('Parts of checkbox', () => {
     let expectedDocumentsText = 'You have selected :desktopnotescommandsdownloadswordFileexcelFile';
     let expectedDownloadsText = 'You have selected :downloadswordFileexcelFile';
 

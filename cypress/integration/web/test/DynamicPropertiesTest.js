@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
-import { DynamicPropertiesPage } from "../pages/DynamicPropertiesPage";
+import { DynamicPropertiesPage } from "../../../support/web/pages/DynamicPropertiesPage";
 
 const dynamicPage = new DynamicPropertiesPage();
 
-it('Dynamic buttons', ()=>{
+it('Dynamic buttons', () => {
     dynamicPage.openPage();
     dynamicPage.isPageOpened();
 
@@ -13,5 +13,5 @@ it('Dynamic buttons', ()=>{
 
     dynamicPage.getEnableButtonAfter().should('be.enabled');
     dynamicPage.getInvisibleButtonAfter().should('be.visible');
-    dynamicPage.getColorButtonAfter().should('have.class', 'text-danger'); 
+    dynamicPage.getColorButtonAfter().should('have.class', 'text-danger');
 })
