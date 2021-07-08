@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 import { AbstartPage } from "./AbstractPage";
 
-export class ButtonPage extends AbstartPage{
+export class ButtonPage extends AbstartPage {
 
     doubleClickButton = '#doubleClickBtn';
     resultDoubleClick = '#doubleClickMessage';
@@ -12,33 +12,33 @@ export class ButtonPage extends AbstartPage{
     clickMeButton = 'Click Me';
     resultClickMeButton = 'You have done a dynamic click';
 
-    constructor (urlPage){
+    constructor(urlPage) {
         super(urlPage);
     }
 
-    clickButton (){
+    clickButton() {
         cy.contains(this.clickMeButton).get('button').last().click();
     }
 
-    clickRightClickButton (){
+    clickRightClickButton() {
         cy.get(this.rightClickButton).rightclick();
     }
 
-    clickDoubleClickButton (){
+    clickDoubleClickButton() {
         cy.get(this.doubleClickButton).dblclick();
     }
 
-    getClickMeButtonMessage (){
+    getClickMeButtonMessage() {
         return cy.contains(this.resultClickMeButton);
     }
 
-    getDoubleClickMessage (){
+    getDoubleClickMessage() {
         return cy.get(this.resultDoubleClick);
     }
 
-    getRightClickButtonMessage (){
+    getRightClickButtonMessage() {
         return cy.get(this.resultTextRightClickButton);
     }
-    
+
 
 }

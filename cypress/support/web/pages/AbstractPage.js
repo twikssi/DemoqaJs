@@ -14,4 +14,8 @@ export class AbstartPage{
         return this.url;
     }
 
+    isPageOpened(){
+        cy.url().should('include', this.url);
+    }
+
 }

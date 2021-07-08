@@ -1,0 +1,6 @@
+{
+    "userName": "string",
+    "password": "Pa$$word123",
+    "status" : "Success",
+    "result" : "User authorized successfully."
+}
