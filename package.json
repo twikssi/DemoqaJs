@@ -14,6 +14,7 @@
     "cypress-xpath": "^1.6.2"
   },
   "dependencies": {
+    "@cypress/schema-tools": "^4.7.8",
     "cypress": "^7.6.0",
     "cypress-downloadfile": "^1.2.1",
     "fs": "0.0.1-security",

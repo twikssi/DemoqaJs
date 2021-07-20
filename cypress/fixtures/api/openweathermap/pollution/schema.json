@@ -1,0 +1,297 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "coord": {
+                "lon": 27.5667,
+                "lat": 53.9
+            },
+            "list": [
+                {
+                    "main": {
+                        "aqi": 1
+                    },
+                    "components": {
+                        "co": 180.24,
+                        "no": 0.16,
+                        "no2": 1.06,
+                        "o3": 62.94,
+                        "so2": 0.56,
+                        "pm2_5": 2.34,
+                        "pm10": 3.86,
+                        "nh3": 1.14
+                    },
+                    "dt": 1626681600
+                }
+            ]
+        }
+    ],
+    "required": [
+        "coord",
+        "list"
+    ],
+    "properties": {
+        "coord": {
+            "$id": "#/properties/coord",
+            "type": "object",
+            "title": "The coord schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "lon": 27.5667,
+                    "lat": 53.9
+                }
+            ],
+            "required": [
+                "lon",
+                "lat"
+            ],
+            "properties": {
+                "lon": {
+                    "$id": "#/properties/coord/properties/lon",
+                    "type": "number",
+                    "title": "The lon schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0.0,
+                    "examples": [
+                        27.5667
+                    ]
+                },
+                "lat": {
+                    "$id": "#/properties/coord/properties/lat",
+                    "type": "number",
+                    "title": "The lat schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0.0,
+                    "examples": [
+                        53.9
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "list": {
+            "$id": "#/properties/list",
+            "type": "array",
+            "title": "The list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "main": {
+                            "aqi": 1
+                        },
+                        "components": {
+                            "co": 180.24,
+                            "no": 0.16,
+                            "no2": 1.06,
+                            "o3": 62.94,
+                            "so2": 0.56,
+                            "pm2_5": 2.34,
+                            "pm10": 3.86,
+                            "nh3": 1.14
+                        },
+                        "dt": 1626681600
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/list/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "main": {
+                                    "aqi": 1
+                                },
+                                "components": {
+                                    "co": 180.24,
+                                    "no": 0.16,
+                                    "no2": 1.06,
+                                    "o3": 62.94,
+                                    "so2": 0.56,
+                                    "pm2_5": 2.34,
+                                    "pm10": 3.86,
+                                    "nh3": 1.14
+                                },
+                                "dt": 1626681600
+                            }
+                        ],
+                        "required": [
+                            "main",
+                            "components",
+                            "dt"
+                        ],
+                        "properties": {
+                            "main": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/main",
+                                "type": "object",
+                                "title": "The main schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "aqi": 1
+                                    }
+                                ],
+                                "required": [
+                                    "aqi"
+                                ],
+                                "properties": {
+                                    "aqi": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/main/properties/aqi",
+                                        "type": "integer",
+                                        "title": "The aqi schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "components": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/components",
+                                "type": "object",
+                                "title": "The components schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "co": 180.24,
+                                        "no": 0.16,
+                                        "no2": 1.06,
+                                        "o3": 62.94,
+                                        "so2": 0.56,
+                                        "pm2_5": 2.34,
+                                        "pm10": 3.86,
+                                        "nh3": 1.14
+                                    }
+                                ],
+                                "required": [
+                                    "co",
+                                    "no",
+                                    "no2",
+                                    "o3",
+                                    "so2",
+                                    "pm2_5",
+                                    "pm10",
+                                    "nh3"
+                                ],
+                                "properties": {
+                                    "co": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/co",
+                                        "type": "number",
+                                        "title": "The co schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            180.24
+                                        ]
+                                    },
+                                    "no": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/no",
+                                        "type": "number",
+                                        "title": "The no schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            0.16
+                                        ]
+                                    },
+                                    "no2": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/no2",
+                                        "type": "number",
+                                        "title": "The no2 schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            1.06
+                                        ]
+                                    },
+                                    "o3": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/o3",
+                                        "type": "number",
+                                        "title": "The o3 schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            62.94
+                                        ]
+                                    },
+                                    "so2": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/so2",
+                                        "type": "number",
+                                        "title": "The so2 schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            0.56
+                                        ]
+                                    },
+                                    "pm2_5": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/pm2_5",
+                                        "type": "number",
+                                        "title": "The pm2_5 schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            2.34
+                                        ]
+                                    },
+                                    "pm10": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/pm10",
+                                        "type": "number",
+                                        "title": "The pm10 schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            3.86
+                                        ]
+                                    },
+                                    "nh3": {
+                                        "$id": "#/properties/list/items/anyOf/0/properties/components/properties/nh3",
+                                        "type": "number",
+                                        "title": "The nh3 schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            1.14
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "dt": {
+                                "$id": "#/properties/list/items/anyOf/0/properties/dt",
+                                "type": "integer",
+                                "title": "The dt schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1626681600
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}

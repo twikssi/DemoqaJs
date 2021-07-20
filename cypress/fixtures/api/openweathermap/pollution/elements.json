@@ -1,0 +1,18 @@
+{
+    "MaxCO" : "400",
+    "MinCO" : "0",
+    "MaxNO" : "10",
+    "MinNO" : "0",
+    "MaxNO2" : "30",
+    "MinNO2" : "0",
+    "MaxO3" : "500",
+    "MinO3" : "0",
+    "MaxSO2": "30",
+    "MinSO2": "0",
+    "MaxPM2_5": "10",
+    "MinPM2_5": "0",
+    "MaxPM10" : "800",
+    "MinPM10" : "0",
+    "MaxNH3" : "100",
+    "MinNH3" : "0"
+}

@@ -1,0 +1,15 @@
+{
+    "lat": 51.5098,
+    "lon": -0.1180,
+    "limit": 2,
+    "check": [
+        {
+            "name": "London",
+            "country": "GB"
+        },
+        {
+            "name": "City of Westminster",
+            "country": "GB"
+        }
+    ]
+}

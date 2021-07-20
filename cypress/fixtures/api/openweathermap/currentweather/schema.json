@@ -1,0 +1,389 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1626271507.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"coord",
+		"weather",
+		"base",
+		"main",
+		"visibility",
+		"wind",
+		"clouds",
+		"dt",
+		"sys",
+		"timezone",
+		"id",
+		"name",
+		"cod"
+	],
+	"properties": {
+		"coord": {
+			"$id": "#root/coord", 
+			"title": "Coord", 
+			"type": "object",
+			"required": [
+				"lon",
+				"lat"
+			],
+			"properties": {
+				"lon": {
+					"$id": "#root/coord/lon", 
+					"title": "Lon", 
+					"type": "number",
+					"examples": [
+						27.5667
+					],
+					"default": 0.0
+				},
+				"lat": {
+					"$id": "#root/coord/lat", 
+					"title": "Lat", 
+					"type": "number",
+					"examples": [
+						53.9
+					],
+					"default": 0.0
+				}
+			}
+		}
+,
+		"weather": {
+			"$id": "#root/weather", 
+			"title": "Weather", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/weather/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"id",
+					"main",
+					"description",
+					"icon"
+				],
+				"properties": {
+					"id": {
+						"$id": "#root/weather/items/id", 
+						"title": "Id", 
+						"type": "integer",
+						"examples": [
+							804
+						],
+						"default": 0
+					},
+					"main": {
+						"$id": "#root/weather/items/main", 
+						"title": "Main", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Clouds"
+						],
+						"pattern": "^.*$"
+					},
+					"description": {
+						"$id": "#root/weather/items/description", 
+						"title": "Description", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"overcast clouds"
+						],
+						"pattern": "^.*$"
+					},
+					"icon": {
+						"$id": "#root/weather/items/icon", 
+						"title": "Icon", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"04d"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		},
+		"base": {
+			"$id": "#root/base", 
+			"title": "Base", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"stations"
+			],
+			"pattern": "^.*$"
+		},
+		"main": {
+			"$id": "#root/main", 
+			"title": "Main", 
+			"type": "object",
+			"required": [
+				"temp",
+				"feels_like",
+				"temp_min",
+				"temp_max",
+				"pressure",
+				"humidity",
+				"sea_level",
+				"grnd_level"
+			],
+			"properties": {
+				"temp": {
+					"$id": "#root/main/temp", 
+					"title": "Temp", 
+					"type": "number",
+					"examples": [
+						26.86
+					],
+					"default": 0.0
+				},
+				"feels_like": {
+					"$id": "#root/main/feels_like", 
+					"title": "Feels_like", 
+					"type": "number",
+					"examples": [
+						28.32
+					],
+					"default": 0.0
+				},
+				"temp_min": {
+					"$id": "#root/main/temp_min", 
+					"title": "Temp_min", 
+					"type": "number",
+					"examples": [
+						26.52
+					],
+					"default": 0.0
+				},
+				"temp_max": {
+					"$id": "#root/main/temp_max", 
+					"title": "Temp_max", 
+					"type": "number",
+					"examples": [
+						26.86
+					],
+					"default": 0.0
+				},
+				"pressure": {
+					"$id": "#root/main/pressure", 
+					"title": "Pressure", 
+					"type": "integer",
+					"examples": [
+						1014
+					],
+					"default": 0
+				},
+				"humidity": {
+					"$id": "#root/main/humidity", 
+					"title": "Humidity", 
+					"type": "integer",
+					"examples": [
+						66
+					],
+					"default": 0
+				},
+				"sea_level": {
+					"$id": "#root/main/sea_level", 
+					"title": "Sea_level", 
+					"type": "integer",
+					"examples": [
+						1014
+					],
+					"default": 0
+				},
+				"grnd_level": {
+					"$id": "#root/main/grnd_level", 
+					"title": "Grnd_level", 
+					"type": "integer",
+					"examples": [
+						989
+					],
+					"default": 0
+				}
+			}
+		}
+,
+		"visibility": {
+			"$id": "#root/visibility", 
+			"title": "Visibility", 
+			"type": "integer",
+			"examples": [
+				10000
+			],
+			"default": 0
+		},
+		"wind": {
+			"$id": "#root/wind", 
+			"title": "Wind", 
+			"type": "object",
+			"required": [
+				"speed",
+				"deg",
+				"gust"
+			],
+			"properties": {
+				"speed": {
+					"$id": "#root/wind/speed", 
+					"title": "Speed", 
+					"type": "number",
+					"examples": [
+						2.82
+					],
+					"default": 0.0
+				},
+				"deg": {
+					"$id": "#root/wind/deg", 
+					"title": "Deg", 
+					"type": "integer",
+					"examples": [
+						213
+					],
+					"default": 0
+				},
+				"gust": {
+					"$id": "#root/wind/gust", 
+					"title": "Gust", 
+					"type": "number",
+					"examples": [
+						5.3
+					],
+					"default": 0.0
+				}
+			}
+		}
+,
+		"clouds": {
+			"$id": "#root/clouds", 
+			"title": "Clouds", 
+			"type": "object",
+			"required": [
+				"all"
+			],
+			"properties": {
+				"all": {
+					"$id": "#root/clouds/all", 
+					"title": "All", 
+					"type": "integer",
+					"examples": [
+						100
+					],
+					"default": 0
+				}
+			}
+		}
+,
+		"dt": {
+			"$id": "#root/dt", 
+			"title": "Dt", 
+			"type": "integer",
+			"examples": [
+				1626271094
+			],
+			"default": 0
+		},
+		"sys": {
+			"$id": "#root/sys", 
+			"title": "Sys", 
+			"type": "object",
+			"required": [
+				"type",
+				"id",
+				"country",
+				"sunrise",
+				"sunset"
+			],
+			"properties": {
+				"type": {
+					"$id": "#root/sys/type", 
+					"title": "Type", 
+					"type": "integer",
+					"examples": [
+						1
+					],
+					"default": 0
+				},
+				"id": {
+					"$id": "#root/sys/id", 
+					"title": "Id", 
+					"type": "integer",
+					"examples": [
+						8939
+					],
+					"default": 0
+				},
+				"country": {
+					"$id": "#root/sys/country", 
+					"title": "Country", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"BY"
+					],
+					"pattern": "^.*$"
+				},
+				"sunrise": {
+					"$id": "#root/sys/sunrise", 
+					"title": "Sunrise", 
+					"type": "integer",
+					"examples": [
+						1626227765
+					],
+					"default": 0
+				},
+				"sunset": {
+					"$id": "#root/sys/sunset", 
+					"title": "Sunset", 
+					"type": "integer",
+					"examples": [
+						1626287681
+					],
+					"default": 0
+				}
+			}
+		}
+,
+		"timezone": {
+			"$id": "#root/timezone", 
+			"title": "Timezone", 
+			"type": "integer",
+			"examples": [
+				10800
+			],
+			"default": 0
+		},
+		"id": {
+			"$id": "#root/id", 
+			"title": "Id", 
+			"type": "integer",
+			"examples": [
+				625144
+			],
+			"default": 0
+		},
+		"name": {
+			"$id": "#root/name", 
+			"title": "Name", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Minsk"
+			],
+			"pattern": "^.*$"
+		},
+		"cod": {
+			"$id": "#root/cod", 
+			"title": "Cod", 
+			"type": "integer",
+			"examples": [
+				200
+			],
+			"default": 0
+		}
+	}
+}

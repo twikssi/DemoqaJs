@@ -1,4 +1,5 @@
 {
     "defaultCommandTimeout" : 6000,
-    "baseUrl" : "https://demoqa.com"
+    "baseUrl" : "https://demoqa.com",
+    "keyApi" : "7c3409781ee8c473db131ef3bdc9843d"
 }

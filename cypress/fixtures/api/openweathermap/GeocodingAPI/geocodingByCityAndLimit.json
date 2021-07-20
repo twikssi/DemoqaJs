@@ -1,0 +1,16 @@
+{
+    "q": "London",
+    "limit": 2,
+    "check": [
+        {
+            "lat": 51.5085,
+            "lon": -0.1257,
+            "country": "GB"
+        },
+        {
+            "lat": 42.9834,
+            "lon": -81.233,
+            "country": "CA"
+        }
+    ]
+}

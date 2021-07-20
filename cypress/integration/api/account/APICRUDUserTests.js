@@ -25,6 +25,8 @@ describe('CRUD User', () => {
                     "content-type": "application/json"
                 }
             }).then((response) => {
+                cy.log('>>>log body: ')
+                cy.log(response.body);
                 expect(response.status).to.eq(400);
                 expect(response.body).to.have.property('code', account.code);
                 expect(response.body).to.have.property('message', account.message);
@@ -45,6 +47,8 @@ describe('CRUD User', () => {
                     "password": password
                 }
             }).then((response) => {
+                cy.log('>>>log body')
+                cy.log(JSON.stringify(response.body));
                 expect(response.status).to.eq(201);
                 expect(response.body).to.have.property('username', userName);
                 userId = response.body.userID;
@@ -53,7 +57,7 @@ describe('CRUD User', () => {
     })
 
     it('Create user token test', () => {
-        let expectedExpires = 7;
+        let expectedExpires = 6;
         cy.fixture('/api/account/user.json').then((user) => {
             cy.request({
                 url: '/Account/v1/GenerateToken',
@@ -63,6 +67,8 @@ describe('CRUD User', () => {
                     "password": password
                 }
             }).then((response) => {
+                cy.log('>>>log body');
+                cy.log(response.body);
                 userToken = response.body.token;
                 expect(response.status).eq(200);
                 expect(response.body).to.have.property('status', user.status);
