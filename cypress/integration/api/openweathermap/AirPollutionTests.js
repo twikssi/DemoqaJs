@@ -2,7 +2,7 @@
 import { ValidateSchema } from "../../../support/util/ValidateSchema";
 
 const validate = new ValidateSchema();
-
+let keyApi = Cypress.config('keyApi');
 const CITY_INFO_PATH = 'api/openweathermap/onecallapi/cityInfo.json';
 const POLLUTION_SCHEMA = 'api/openweathermap/pollution/schema.json';
 const ELEMENETS = 'api/openweathermap/pollution/elements.json';
@@ -17,7 +17,7 @@ describe('Air pollution tests', () => {
                 qs: {
                     "lon": info.lon,
                     "lat": info.lat,
-                    appid: '7c3409781ee8c473db131ef3bdc9843d'
+                    appid: keyApi
                 }
             }).then((response) => {
                 cy.log(JSON.stringify(response.body));
@@ -64,7 +64,7 @@ describe('Air pollution tests', () => {
                 qs: {
                     "lon": info.lon,
                     "lat": info.lat,
-                    appid: '7c3409781ee8c473db131ef3bdc9843d',
+                    appid: keyApi,
                     start: info.start,
                     end: info.end
                 }
