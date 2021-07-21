@@ -19,6 +19,7 @@ it('Upload, download page tests', () => {
     uploadDownloadPage.isPageOpened();
 
     uploadDownloadPage.clickDownloadButton();
+    cy.wait(5000);
     cy.fixture('../downloads/sampleFile.jpeg').should('exist');
 
     uploadDownloadPage.uploadFile('jsPhoto.png');
