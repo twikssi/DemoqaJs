@@ -7,7 +7,7 @@ const uploadDownloadPage = new UploadDownloadPage();
 
 it('Upload, download page tests', () => {
     
-    fs.open('../../../downloads/sampleFile.jpeg');
+    //fs.open('../../../downloads/sampleFile.jpeg');
 
     let expectedPath = 'C:\\fakepath\\jsPhoto.png';
 
