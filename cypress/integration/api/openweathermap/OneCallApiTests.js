@@ -1,8 +1,5 @@
 ///<reference types="cypress"/>
-//import { isUndefined } from "cypress/types/lodash";
-import { ValidateSchema } from "../../../support/util/ValidateSchema";
 
-let validSc = new ValidateSchema();
 let keyApi = Cypress.config('keyApi');
 let unit = 'metric';
 const max_degree = 60;
@@ -31,10 +28,6 @@ describe('One call API tests', () => {
                 expect(response.body.lon).to.eql(info.lon);
                 expect(response.body.timezone).to.eql(info.timezone);
                 expect(response.body.timezone_offset).to.eql(info.timezone_offset);
-
-                cy.fixture('api/openweathermap/onecallapi/schema.json').then((schema) => {
-                    expect(validSc.validateSchema(schema, response.body)).to.eq(true, 'Does schema match?');
-                });
 
 
                 listTemperature = response.body.hourly;

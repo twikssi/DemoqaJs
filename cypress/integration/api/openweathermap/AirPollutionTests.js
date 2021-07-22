@@ -1,7 +1,5 @@
 ///<reference types="cypress"/>
-import { ValidateSchema } from "../../../support/util/ValidateSchema";
 
-const validate = new ValidateSchema();
 let keyApi = Cypress.config('keyApi');
 const CITY_INFO_PATH = 'api/openweathermap/onecallapi/cityInfo.json';
 const POLLUTION_SCHEMA = 'api/openweathermap/pollution/schema.json';
@@ -27,9 +25,6 @@ describe('Air pollution tests', () => {
                 expect(response.body.coord.lat).to.eq(info.lat);
                 expect(response.body.coord.lon).to.eq(info.lon);
 
-                cy.fixture(POLLUTION_SCHEMA).then((schema) => {
-                    expect(validate.validateSchema(schema, response.body)).to.eq(true, 'does schema match?');
-                })
 
                 cy.fixture(ELEMENETS).then((elem) => {
                     let component = response.body.list[0].components;

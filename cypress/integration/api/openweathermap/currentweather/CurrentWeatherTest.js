@@ -1,10 +1,7 @@
 ///<reference types="cypress"/>
-import { ValidateSchema } from "../../../../support/util/ValidateSchema";
-
 
 let keyApi = Cypress.config('keyApi');
 let unit = 'metric';
-let validSc = new ValidateSchema();
 
 describe('Current weather tests', () => {
 
@@ -25,9 +22,6 @@ describe('Current weather tests', () => {
                 expect(response.body).to.have.property('timezone', info.timezone);
                 expect(response.body).to.have.property('name', info.city);
 
-                cy.fixture('api/openweathermap/currentweather/schema.json').then((schema) => {
-                    expect(validSc.validateSchema(schema, response.body)).to.eq(true, 'Schema is passed');
-                })
 
                 const max_degree = 60;
                 const min_degree = -95;
